@@ -1,0 +1,20 @@
+/coverage
+/build
+/dist
+.env
+.eslintcache
+/node_modules
+/tmp
+
+log*
+npm-debug.log*
+*.swp
+yarn-debug.log*
+yarn-error.log*
+
+!lint-staged.config.js
+!log*.ts
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
