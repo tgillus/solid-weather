@@ -1,6 +1,6 @@
 import { Http } from '../../vendor/http/http';
 
-export class GeoService {
+export class GeoGateway {
   constructor(private readonly http: Http, private readonly api: string) {}
 
   async locationByZip(zip: string) {
@@ -12,7 +12,7 @@ export class GeoService {
   }
 
   static build() {
-    return new GeoService(new Http(), 'http://localhost:4000');
+    return new GeoGateway(new Http(), 'http://localhost:4000');
   }
 }
 
