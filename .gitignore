@@ -14,7 +14,3 @@ yarn-error.log*
 
 !lint-staged.config.js
 !log*.ts
-
-# CDK asset staging directory
-.cdk.staging
-cdk.out
