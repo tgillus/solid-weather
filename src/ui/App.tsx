@@ -1,21 +1,26 @@
-import { Component, createSignal, onMount } from 'solid-js';
-import { GeoGateway } from '../infrastructure/geo/geo-gateway';
-
-import styles from './App.module.css';
+import { Component, createSignal, For, onMount } from 'solid-js';
+import { Address, GeoGateway } from '../infrastructure/geo/geo-gateway';
 
 const App: Component = () => {
-  const [address, setAddress] = createSignal('');
+  const [addresses, setAddresses] = createSignal<Address[]>([]);
 
   onMount(async () => {
     const geoGateway = GeoGateway.build();
-    const result = await geoGateway.locationByZip('20152');
-    setAddress(result.addresses[0].formattedAddress);
+    const { addresses } = await geoGateway.locationByZip('20152');
+
+    setAddresses(addresses);
   });
 
   return (
-    <div class={styles.App}>
-      <p>{address()}</p>
-    </div>
+    <ul>
+      <For each={addresses()}>
+        {(address, i) => (
+          <li>
+            ({i() + 1}) {address.formattedAddress}
+          </li>
+        )}
+      </For>
+    </ul>
   );
 };
 

@@ -16,12 +16,12 @@ export class GeoGateway {
   }
 }
 
-interface GeoLocationResponse {
-  addresses: Address[];
-}
-
-interface Address {
+export interface Address {
   formattedAddress: string;
   latitude: number;
   longtitude: number;
+}
+
+interface GeoLocationResponse {
+  addresses: Address[];
 }
