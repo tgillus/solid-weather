@@ -21,16 +21,16 @@
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",
     "husky": "8.0.3",
-    "lint-staged": "13.2.0",
+    "lint-staged": "13.2.1",
     "prettier": "2.8.7",
     "tsx": "3.12.6",
-    "typescript": "5.0.3",
+    "typescript": "5.0.4",
     "vite": "4.2.1",
     "vite-plugin-solid": "2.7.0",
     "vitest": "0.29.8"
   },
   "dependencies": {
     "ky": "0.33.3",
-    "solid-js": "1.7.2"
+    "solid-js": "1.7.3"
   }
 }
