@@ -6,7 +6,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM"],
     "module": "ESNext",
     "moduleResolution": "node",
     "newLine": "lf",

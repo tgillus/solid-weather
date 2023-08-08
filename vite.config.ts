@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 
@@ -10,7 +11,9 @@ export default defineConfig({
     port: 3000,
   },
   test: {
-    transformMode: { web: [/\.[jt]sx?$/] },
+    testTransformMode: {
+      web: ['*.[jt]sx'],
+    },
     deps: { registerNodeLoader: false },
   },
 });
